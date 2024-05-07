@@ -145,92 +145,62 @@ function selectAlgorithm() {
 <body onload="initAlgorithm()">
 
 <header>
-  <h1><a href="index.html">Data Structure Visualizations</a></h1>
+  <h1><a href="index.html">Data Structure and Algorithms  |  Dashboard</a></h1>
 </header>
 
 <div id="content">
 
-<details id="about">
-  <summary><h2>About</h2></summary>
-
-  <p>A useful aid to understand complex data structures is to see them in action. We've developed interactive animations for a
-  variety of data structures and algorithms. Our visualization tool is written in Javascript using the HTML5 canvas element,
-  and run in just about any modern browser – including iOS devices like the iPhone and iPad, and even the web browser in
-  the Kindle!  (The frame rate is low enough in the Kindle that the visualizations aren't terribly useful, but the tree-based
-  visualizations – BSTs and AVL Trees – seem to work well enough)
-  </p>
-
-  <h3>History</h3>
-
-  <p>The code was originally developed by 
-  <a href="http://www.cs.usfca.edu/galles">David Galles</a>, University of San Francisco,
-  in Java and then <a href="https://www.cs.usfca.edu/~galles/visualization/">ported to Javascript in 2011</a>.
-  Some updates were made by 
-  <a href="https://github.com/chatziko">Kostas Chatzikokolakis</a>, and this current repository is maintained by
-  <a href="https://github.com/heatherleaf">Peter Ljunglöf</a>, University of Gothenburg & Chalmers University of Technology.
-  </p>
-
-  <h3>Source code</h3>
-
-  <p>All source code is available at the 
-  <a href="https://github.com/ChalmersGU-data-structure-courses/visualization">GitHub repository</a>.
-  Everything is <a href="https://github.com/ChalmersGU-data-structure-courses/visualization/blob/master/LICENSE">licensed under FreeBSD</a>,
-  and you can use it for whatever you like.
-  </p>
-</details>
 
 <section>
 
   <label for="algorithmSelector">Choose a data structure/algorithm:</label>
   <h2 id="selectorWrapper">
     <select name="algorithmSelector" id="algorithmSelector" onchange="selectAlgorithm()">
-      <option disabled value="">&mdash; Please choose an algorithm or data structure &mdash;</option>
-
       <hr/>
 
-      <optgroup label="Searching and sorting">
-        <option value="Search">Searching in a sorted array: Linear and binary search</option>
-        <option value="Sort.Comparison">Comparison-based sorting algorithms</option>
-        <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;(Bubble-, Selection-, Insertion-, Shell-, Merge-, Quicksort)</option>
-      </optgroup>
+   
+        <option value="Search">Linear and binary search</option>
+        <option value="Sort.Comparison">Sorting algorithms</option>
+  
+  
 
-      <optgroup label="Stacks and queues">
+    
         <option value="Stack.Array">Stack: Array implementation</option>
         <option value="Stack.LinkedList">Stack: Linked list implementation</option>
         <option value="Queue.Array">Queue: Array implementation</option>
         <option value="Queue.LinkedList">Queue: Linked list implementation</option>
-      </optgroup>
+     
 
-      <optgroup label="Search trees">
+    
         <option value="Tree.BST">BST: Binary search tree</option>
         <option value="Tree.AVL">AVL tree</option>
         <option value="Tree.RedBlack">Red-black tree</option>
         <option value="Tree.TwoThreeTree">2-3 tree</option>
-      </optgroup>
+     
 
-      <optgroup label="Hash tables">
+   
         <option value="Hash.SeparateChaining">Separate chaining hash table</option>
         <option value="Hash.OpenAdressing">Open addressing hash table</option>
-      </optgroup>
+     
       
-      <optgroup label="Priority queues">
+ 
         <option value="Heap.Binary">Binary heap</option>
-      </optgroup>
+     
 
-      <optgroup label="Graph algorithms">
+   
         <option value="Graph.DFS">DFS: Depth-first search</option>
         <option value="Graph.BFS">BFS: Breadth-first search</option>
         <option value="Graph.Dijkstra">Dijkstra's shortest path search</option>
         <option value="Graph.Prim">Prim's MST (minimum spanning tree) algorithm</option>
         <option value="Graph.Kruskal">Kruskal's MST (minimum spanning tree) algorithm</option>
-      </optgroup>
+     
 
       <option disabled></option>
       <hr/>
       <option disabled>&mdash; All algorithms and data structures below here &mdash;</option>
       <option disabled></option>
 
-      <optgroup label="Searching and sorting">
+ 
         <option value="Search">Searching in a sorted array: Linear and binary search</option>
         <option value="Sort.Comparison">Comparison-based sorting algorithms</option>
         <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;(Bubble-, Selection-, Insertion-, Shell-, Merge-, Quicksort)</option>
@@ -238,18 +208,18 @@ function selectAlgorithm() {
         <option value="Sort.Counting">Counting Sort</option>
         <option value="Sort.Radix">Radix Sort</option>
         <option value="Sort.Heap">Heap Sort</option>
-      </optgroup>
+     
 
-      <optgroup label="Stacks and queues">
+    
         <option value="Stack.Array">Stack: Array implementation</option>
         <option value="Stack.LinkedList">Stack: Linked list implementation</option>
         <option value="Queue.Array">Queue: Array implementation</option>
         <option value="Queue.LinkedList">Queue: Linked list implementation</option>
         <option disabled>Lists: Array implementation (only available in the old Java version)</option>
         <option disabled>Lists: Linked iist implementation (only available in the old Java version)</option>
-      </optgroup>
+     
       
-      <optgroup label="Search Trees">
+     
         <option value="Tree.BST">BST: Binary search tree</option>
         <option value="Tree.AVL">AVL tree</option>
         <option value="Tree.RedBlack">Red-black tree</option>
@@ -259,23 +229,14 @@ function selectAlgorithm() {
         <option value="Tree.Ternary">Ternary search tree (Trie with BST of children)</option>
         <option value="Tree.BTree">B-tree</option>
         <option value="Tree.BPlusTree">B+ tree</option>
-      </optgroup>
+     
 
-      <optgroup label="Hash tables">
+   
         <option value="Hash.SeparateChaining">Separate chaining hash table</option>
         <option value="Hash.OpenAdressing">Open addressing hash table</option>
-        <option value="Hash.OpenAdrBuckets">Open addressing hash table, using buckets</option>
-      </optgroup>
+        <option value="Hash.OpenAdrBuckets">Open addressing hash table, using buckets</option> 
       
-      <optgroup label="Priority queues">
-        <option value="Heap.Binary">Binary heap</option>
-        <option value="Heap.Binomial">Binomial heap</option>
-        <option value="Heap.Fibonacci">Fibonacci heap</option>
-        <option value="Heap.Leftist">Leftist heap</option>
-        <option value="Heap.Skew">Skew heap</option>
-      </optgroup>
-      
-      <optgroup label="Graph algorithms">
+     
         <option value="Graph.DFS">DFS: Depth-first search</option>
         <option value="Graph.BFS">BFS: Breadth-first search</option>
         <option value="Graph.Dijkstra">Dijkstra's shortest path search</option>
@@ -285,33 +246,7 @@ function selectAlgorithm() {
         <option value="Graph.ToposortIndegree">Topological sort (using in-degree array)</option>
         <option value="Graph.ToposortDFS">Topological sort (using DFS)</option>
         <option value="Graph.Floyd">Floyd-Warshall (all pairs shortest paths)</option>
-      </optgroup>
-
-      <optgroup label="Recursion training">
-        <option value="Recursive.Factorial">Factorial</option>
-        <option value="Recursive.Reverse">Reversing a string</option>
-        <option value="Recursive.NQueens">N-queens problem</option>
-      </optgroup>
-
-      <optgroup label="Dynamic programming">
-        <option value="DP.Fibonacci">Calculating Fibonacci numbers</option>
-        <option value="DP.CoinChange">Coin change problem</option>
-        <option value="DP.LCS">Longest common subsequence</option>
-      </optgroup>
-      
-      <optgroup label="Geometric algorithms">
-        <option value="Geometric.RotateScale2D">2D rotation and scale matrices</option>
-        <option value="Geometric.RotateTranslate2D">2D rotation and translation matrices</option>
-        <option value="Geometric.ChangeCoord2D">2D changing coordinate systems</option>
-        <option value="Geometric.RotateScale3D">3D rotation and scale matrices</option>
-        <option value="Geometric.ChangeCoord3D">3D changing coordinate systems</option>
-      </optgroup>
-        
-      <optgroup label="Others...">
-        <option value="DisjointSet">Disjoint set (union-find)</option>
-        <option disabled>Huffman coding (only available in the old Java version)</option>
-      </optgroup>
-
+     
     </select>
   </h2>
 
@@ -324,120 +259,9 @@ function selectAlgorithm() {
 
 </section>
 
-<details id="help">
-  <summary><h2>Help</h2></summary>
-
-  <h3>Algorithm Specific Controls</h3>
-
-  <p>At the top of the screen (boxed in red in the above screenshot) are the algorithm specific controls -- these will change depending upon
-  what algorithm you are visualizing.  For example, in a BST (binary search tree) you can insert, delete, or find an element in the BST by entering text in the
-  appropriate field and either pressing return or clicking the relevant button.  The tree can be printed by clicking the print button.
-  Once you give a command, the visualiztion will start, and can be controlled by the general animation controls at the bottom of the screen.
-
-  <h3>General Animation Controls</h3>
-
-  <ul>
-    <li><input type="button" value="⏮"/> (<em>Skip back</em>):
-      If you are in the middle of an animation, this button will completly undo the current command.
-      If you are not in the middle of an animation, this button will undo the previous command.
-    </li>
-    <li><input type="button" value="⏴"/> (<em>Step back</em>):
-      This button is only active if you have paused the current animation (using the play/pause button).
-      Step back one step in the current animation.  
-      If you are not currently animating, step back into the previous command.  
-      You could use this button (with sufficient keypresses) to back up through the entire history of everything you've done.
-    </li>
-    <li><input type="button" value="⏯︎"/> (<em>Play/pause</em>):
-      Toggle between play mode (in which the algorithm runs free until it completes) and
-      paused mode (where you need to press the <em>Step Forward</em> or <em>Step back</em> button to advance the animation).
-    </li>
-    <li><input type="button" value="⏵"/> (<em>Step forward</em>):
-      This button is only active if you have paused the current animation (using the play/pause button), 
-      and the current animation has not yet completed. 
-      Step forward one step in the current animation.
-    </li>
-    <li><input type="button" value="⏭"/> (<em>Skip forward</em>):
-      This button is only active if the current animation has not completed.
-      Skip to the end of the current animation.
-    </li>
-    <li><em>Animation speed</em>:
-      Change the speed of the animation.
-      The value of this select box is saved in a cookie, so you should only need to set it once if you have a preferred speed.
-    </li>
-    <li><em>Canvas size</em>:
-      Change the percieved size of the display area.  
-      This will often clear out the current animation, but the new size is also saved in a cookie, so you should only need to change this field once.
-    </li>
-  </ul>
-  
-  <p>Note that it can be easy to confuse yourself by stepping forward an backwards through an animation – you can confuse the <em>next</em>
-  step in the animation with the <em>previous</em> step, and misunderstand how the algorithm works.  You may wish to only step
-  forward when you are first delving into a particular algorithm.
-  
-  
-</details>
-
-<details id="faq">
-  <summary><h2>Frequently asked questions</h2></summary>
-
-  <ol>
-    <li><em>Can I use these materials in my classes?</em>
-    <ul><li>
-      Certainly!
-      We'd prefer that you just link to these pages rather than cache anything locally so that your
-      students will get the most up-to-date version of everything.
-      If you do use this in your class, please drop us a line to let us know about it, 
-      we're curious to see who else will find this useful.
-    </li></ul>
-
-    <li><em>I think I've found a bug...</em>
-    <ul><li>
-      Please <a href="https://github.com/ChalmersGU-data-structure-courses/visualization/issues">create an issue</a> in the GitHub repository. 
-      Try to be specific – that is, exactly what sequence of operations lead to the undesired behavior.
-    </li></ul>
-
-    <li><em>How are elements ordered, e.g., when inserting elements into ordered search trees?</em></li>
-    <ul><li>
-      Numbers are ordered numerically and strings are ordered lexicographically. Furthermore, 
-      Furthermore, we decided that all numbers are smaller than all strings.
-    </li></ul>
-
-    <li><em>How can I get this to work on my cellphone, which has a very small screen?</em></li>
-    <ul><li>
-      If you change the canvas size to something that seems reasonable for your device, 
-      we will use a cookie to remember your preferred size.
-      However, some visualizations (e.g., sorting and graphs) require that the canvas size is large, 
-      which makes them difficult to work with on a cellphone.
-    </ul>
-
-    <li><em>Wait ... you are using cookies?</em></li>
-    <ul><li>
-      Only for remembering your preferred animation speed and canvas size.
-      Everything will still work if you disable cookies.
-      We aren't doing tracking of any kind.
-    </li></ul>
-
-    <li><em>Can I use this material as a base for my own visualizations?</em></li>
-    <ul><li>
-      Yes! See the <a href="https://github.com/ChalmersGU-data-structure-courses/visualization">GitHub repository</a>
-      for a simple tutorial and links to the source code.
-      If you do use the code, please leave in the copyright information at the beginning of each source file, 
-      and put a link to these pages from the page where your visualizations are located.
-      If you create something really cool, please let us know.
-    </li></ul>
-
-  </ol>
-</details>
-
 </div>
 
-<footer>
-  <p>&copy;2011-2024 
-    <a href="http://www.cs.usfca.edu/galles">David Galles</a> (original code), 
-    <a href="https://github.com/chatziko">Kostas Chatzikokolakis</a> (updates), 
-    <a href="https://github.com/heatherleaf">Peter Ljunglöf</a> (updates)
-  </p>
-</footer>
+
 
 </body>
 </html>

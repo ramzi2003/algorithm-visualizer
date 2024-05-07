@@ -36,7 +36,7 @@ img, picture, video, canvas, svg {
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 100%;
-	background-color: green;
+	background-color: rgb(152, 62, 236);
 }
 
 section, p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
@@ -53,13 +53,17 @@ body > * {
 	padding-right: 5%;
 }
 
-header, footer {
-	color: gold;
-	background-color: green;
+header {
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 #content {
-	background-color: lightyellow;
+	background-color: white;
+	border-radius: 50px 50px 0 0;
+	margin-top: 3rem;
+	padding-top: 3rem;
 }
 
 summary {
@@ -113,7 +117,6 @@ canvas, #selectorWrapper > select {
 canvas {
 	background-color: white;
 	width: 100%;
-	max-width: 1000px;
 }
 
 
