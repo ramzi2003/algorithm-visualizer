@@ -1,12 +1,3 @@
-# Settings for the ESLint Javascript linter: https://eslint.org/
-
-# To install ESLint, run the following:
-# `npm install eslint @stylistic/eslint-plugin`
-# (You need NPM - the Node Package Manager)
-
-# To test a Javascript file, run `npx eslint <filename>`
-# To let ESLint auto-fix some minor problems, run `npx eslint --fix <filename>`
-
 
 root: true
 

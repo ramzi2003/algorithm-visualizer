@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-/* A mixture of the following two CSS resets:
-   - Josh Comeau: https://www.joshwcomeau.com/css/custom-css-reset/
-   - Andy Bell: https://piccalil.li/blog/a-more-modern-css-reset/
-*/
 
 *, *::before, *::after {
 	box-sizing: border-box;

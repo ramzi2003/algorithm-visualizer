@@ -1,15 +1,11 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
 
-<!-- Place your own title here -->
 <title>Example data structure visualization</title>
 
-<!-- CSS sheet for how the page is laid out -->
 <link rel="stylesheet" href="visualization.css">
 
-<!-- Javascript for the actual visualization code -->
 <script type="text/javascript" src="AnimationLibrary/EventListener.js"> </script>
 <script type="text/javascript" src="AnimationLibrary/UndoBlock.js"> </script>
 <script type="text/javascript" src="AnimationLibrary/Objects/AnimatedObject.js"> </script>
@@ -25,7 +21,6 @@
 <script type="text/javascript" src="AnimationLibrary/Toolbar.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Algorithm.js"> </script>
 
-<!-- Replace this with the file(s) of the algorithm/data structure you want to visualize -->
 <script type="text/javascript" src="AlgorithmLibrary/ExampleStack.js"> </script>
 
 </head>
@@ -33,22 +28,16 @@
 <body onload="new Algorithm.ExampleStack(initCanvas())">
 
 <header>
-  <!-- Place your header here -->
   <h1>Example visualization (of a simple stack)</h1>
 </header>
 
-<!-- Any other content before... -->
 
 <section id="content">
-  <!-- Buttons to control specific animation (insert/find/etc) -->
   <fieldset id="algorithmSpecificControls"></fieldset>
-  <!-- Drawing canvas where all animation is done. Note: can be resized in code -->
   <canvas id="canvas"></canvas>
-  <!-- Buttons to control general animation (play/pause/undo/etc) -->
   <fieldset id="generalAnimationControls"></fieldset>
 </section>
 
-<!-- ...or after the canvas -->
 
 
 
