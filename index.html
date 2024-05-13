@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Visualization of Data Structures and Algorithms</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <link rel="stylesheet" href="visualization.css">
 
@@ -39,13 +40,7 @@
 <script type="text/javascript" src="AlgorithmLibrary/Tree/Tree.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Tree/BST.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Tree/AVLTree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/RedBlack.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/SplayTree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/Trie.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/RadixTree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/TernaryTree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/BTree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Tree/BPlusTree.js"> </script>
+
 </optgroup>
 
 <script type="text/javascript" src="AlgorithmLibrary/Hash/Hash.js"> </script>
@@ -53,22 +48,12 @@
 <script type="text/javascript" src="AlgorithmLibrary/Hash/OpenAdressing.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Hash/OpenAdrBuckets.js"> </script>
 
-<script type="text/javascript" src="AlgorithmLibrary/Heap/Heap.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Heap/BinaryHeap.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Heap/BinomialHeap.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Heap/FibonacciHeap.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Heap/LeftistHeap.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Heap/SkewHeap.js"> </script>
 
 <script type="text/javascript" src="AlgorithmLibrary/Graph/Graph.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Graph/BFS.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Graph/DFS.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Graph/DijkstraPrim.js"> </script>
 <script type="text/javascript" src="AlgorithmLibrary/Graph/Kruskal.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Graph/Connected.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Graph/ToposortIndegree.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Graph/ToposortDFS.js"> </script>
-<script type="text/javascript" src="AlgorithmLibrary/Graph/Floyd.js"> </script>
 
 
 
@@ -125,7 +110,7 @@ function selectAlgorithm() {
 
   <label for="algorithmSelector">Choose a data structure/algorithm:</label>
   <h2 id="selectorWrapper">
-    <select name="algorithmSelector" id="algorithmSelector" onchange="selectAlgorithm()">
+    <select name="algorithmSelector" id="algorithmSelector" onchange="selectAlgorithm()" style="cursor: pointer;">
       <hr/>
 
    
@@ -135,10 +120,10 @@ function selectAlgorithm() {
   
 
     
-        <option value="Stack.Array">Stack: Array implementation</option>
-        <option value="Stack.LinkedList">Stack: Linked list implementation</option>
-        <option value="Queue.Array">Queue: Array implementation</option>
-        <option value="Queue.LinkedList">Queue: Linked list implementation</option>
+        <option value="Stack.Array">Stack</option>
+        <option value="Stack.LinkedList">Linked list</option>
+        <option value="Queue.Array">Queue</option>
+
      
 
     
@@ -156,57 +141,7 @@ function selectAlgorithm() {
      
 
       <option disabled></option>
-      <hr/>
-      <option disabled>&mdash; All algorithms and data structures below here &mdash;</option>
-      <option disabled></option>
-
- 
-        <option value="Search">Searching in a sorted array: Linear and binary search</option>
-        <option value="Sort.Comparison">Comparison-based sorting algorithms</option>
-        <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;(Bubble-, Selection-, Insertion-, Shell-, Merge-, Quicksort)</option>
-        <option value="Sort.Bucket">Bucket Sort</option>
-        <option value="Sort.Counting">Counting Sort</option>
-        <option value="Sort.Radix">Radix Sort</option>
-        <option value="Sort.Heap">Heap Sort</option>
-     
-
-    
-        <option value="Stack.Array">Stack: Array implementation</option>
-        <option value="Stack.LinkedList">Stack: Linked list implementation</option>
-        <option value="Queue.Array">Queue: Array implementation</option>
-        <option value="Queue.LinkedList">Queue: Linked list implementation</option>
-        <option disabled>Lists: Array implementation (only available in the old Java version)</option>
-        <option disabled>Lists: Linked iist implementation (only available in the old Java version)</option>
-     
       
-     
-        <option value="Tree.BST">BST: Binary search tree</option>
-        <option value="Tree.AVL">AVL tree</option>
-        <option value="Tree.RedBlack">Red-black tree</option>
-        <option value="Tree.Splay">Splay tree</option>
-        <option value="Tree.Trie">Trie (prefix tree)</option>
-        <option value="Tree.Radix">Radix tree (compact Trie)</option>
-        <option value="Tree.Ternary">Ternary search tree (Trie with BST of children)</option>
-        <option value="Tree.BTree">B-tree</option>
-        <option value="Tree.BPlusTree">B+ tree</option>
-     
-
-   
-        <option value="Hash.SeparateChaining">Separate chaining hash table</option>
-        <option value="Hash.OpenAdressing">Open addressing hash table</option>
-        <option value="Hash.OpenAdrBuckets">Open addressing hash table, using buckets</option> 
-      
-     
-        <option value="Graph.DFS">DFS: Depth-first search</option>
-        <option value="Graph.BFS">BFS: Breadth-first search</option>
-        <option value="Graph.Dijkstra">Dijkstra's shortest path search</option>
-        <option value="Graph.Prim">Prim's MST (minimum spanning tree) algorithm</option>
-        <option value="Graph.Kruskal">Kruskal's MST (minimum spanning tree) algorithm</option>
-        <option value="Graph.CC">Connected components</option>
-        <option value="Graph.ToposortIndegree">Topological sort (using in-degree array)</option>
-        <option value="Graph.ToposortDFS">Topological sort (using DFS)</option>
-        <option value="Graph.Floyd">Floyd-Warshall (all pairs shortest paths)</option>
-     
     </select>
   </h2>
 
@@ -219,6 +154,8 @@ function selectAlgorithm() {
 </div>
 
 
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

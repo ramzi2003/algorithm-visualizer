@@ -169,8 +169,8 @@ Algorithm.Graph = class Graph extends Algorithm {
         this.smallGraphButton.checked = true;
 
         const graphReprButtonList = this.addRadioButtonGroupToAlgorithmBar(
-            ["Logical Representation", "Adjacency List Representation", "Adjacency Matrix Representation"],
-            "GraphRepresentation",
+            ["Logical Representation", "", ""],
+            "",
         );
         this.logicalButton = graphReprButtonList[0];
         this.logicalButton.onclick = this.graphRepChangedCallback.bind(this, 1);

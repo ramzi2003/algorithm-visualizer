@@ -106,16 +106,6 @@ class AnimationManager extends EventListener {
         if (!this.controlBars?.length) return;
         const bar = this.controlBars[0];
 
-        this.skipBackButton = bar.addButton("⏮", {title: "Skip back"});
-        this.skipBackButton.onclick = this.skipBack.bind(this);
-        this.stepBackButton = bar.addButton("⏴", {title: "Step back"});
-        this.stepBackButton.onclick = this.stepBack.bind(this);
-        this.playPauseBackButton = bar.addButton("⏯︎", {title: "Run/pause animation"});
-        this.playPauseBackButton.onclick = this.togglePlayPause.bind(this);
-        this.stepForwardButton = bar.addButton("⏵", {title: "Step forward"});
-        this.stepForwardButton.onclick = this.step.bind(this);
-        this.skipForwardButton = bar.addButton("⏭", {title: "Skip forward"});
-        this.skipForwardButton.onclick = this.skipForward.bind(this);
 
         if (animationSpeeds) {
             bar.addBreak();

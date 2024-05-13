@@ -14,8 +14,8 @@ Algorithm.Sort.Comparison = class ComparisonSort extends Algorithm.Sort {
     ARRAY_SIZE_LABELS = ["Small (25)", "Medium (50)", "Large (100)", "Huge (200)"];
 
     DEFAULT_ALGORITHM = "insertion";
-    ALGORITHMS = ["insertion", "selection", "bubble", "quick", "merge", "shell"];
-    ALGORITHM_LABELS = ["Insertion sort", "Selection sort", "Bubble sort", "Quicksort", "Merge sort", "Shellsort"];
+    ALGORITHMS = ["insertion", "selection", "bubble", "quick", "merge"];
+    ALGORITHM_LABELS = ["Insertion sort", "Selection sort", "Bubble sort", "Quicksort", "Merge sort"];
 
     Y_MARGINAL = 50;
     LABEL_Y_ADD = 10;
@@ -159,9 +159,7 @@ Algorithm.Sort.Comparison = class ComparisonSort extends Algorithm.Sort {
         case "merge":
             this.mergeSort();
             break;
-        case "shell":
-            this.shellSort();
-            break;
+       
         }
         this.animationManager.StartNewAnimation(this.commands);
     }

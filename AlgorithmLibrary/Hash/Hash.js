@@ -74,8 +74,8 @@ Algorithm.Hash = class Hash extends Algorithm {
         this.addBreakToAlgorithmBar();
 
         this.hashSelect = this.addSelectToAlgorithmBar(
-            [this.HASH_INTEGER, this.HASH_STRING],
-            ["Hash integers", "Hash strings"],
+            [this.HASH_INTEGER],
+            ["Hash integers"],
         );
         this.hashSelect.value = this.HASH_INTEGER;
         this.hashSelect.onchange = this.resetAll.bind(this);
